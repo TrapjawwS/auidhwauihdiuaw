@@ -1,0 +1,9 @@
+{
+  "name": "FOXYFreeChat",
+  "version": "0.0.9",
+  "description": "Online chat app",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.1"
+  }
+}

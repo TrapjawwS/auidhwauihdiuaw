@@ -1,0 +1,16 @@
+<title>Banned</title>
+<center>
+  <h1>Banned</h1>
+  <p id="banmessage">You have been blacklisted for this site.</p>
+</center>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script>
+    $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+  // Convert key values to json
+  data = data.trim().split('\n').reduce(function(obj, pair) {
+    pair = pair.split('=');
+    return obj[pair[0]] = pair[1], obj;
+  }, {});
+  document.getElementById("banmessage").innerText = "The IP address '" + data.ip + "' has been blacklisted for this site."
+});</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
